@@ -13,6 +13,7 @@ import src.strategy.AggressiveStrategy;
 import src.strategy.DefensiveStrategy;
 import src.rules.ClassicMovementRule;
 import src.rules.StandardWinningRule;
+import src.rules.AnyNumberStartingRule;
 
 import java.util.Arrays;
 import java.util.List;
@@ -39,6 +40,7 @@ public class App {
                 .setBoard(board)
                 .addPlayers(players)
                 .setDice(new Dice(6))
+                .setStartingRule(new AnyNumberStartingRule())
                 .setWinningRule(new StandardWinningRule())
                 .setMovementRule(new ClassicMovementRule())
                 .build();
